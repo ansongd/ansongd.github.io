@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <script type="text/javascript" src="resources/scripts/google.charts.load.js"></script>
+    <link type="text/css" href="resources/css/frome.css" rel="Stylesheet" />
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['完整观看',     613],
+          ['未看完',      223],
+        ]);
+
+        var options = {
+          title: '观看情况',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="donutchart" style="width: 600px; height: 370px;"></div>
+  </body>
+</html>
