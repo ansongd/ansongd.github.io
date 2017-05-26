@@ -12,13 +12,23 @@
   position:absolute;
   z-index:0;
 }
-#u100_img {
+#u100_div {
   border-width:0px;
   position:absolute;
   left:0px;
   top:0px;
   width:1210px;
-  height:1025px;
+  height:1236px;
+  background:inherit;
+  background-color:rgba(242, 242, 242, 1);
+  box-sizing:border-box;
+  border-width:1px;
+  border-style:solid;
+  border-color:rgba(242, 242, 242, 1);
+  border-radius:0px;
+  -moz-box-shadow:none;
+  -webkit-box-shadow:none;
+  box-shadow:none;
 }
 #u100 {
   border-width:0px;
@@ -26,13 +36,13 @@
   left:40px;
   top:34px;
   width:1210px;
-  height:1025px;
+  height:1236px;
 }
 #u101 {
   border-width:0px;
   position:absolute;
   left:2px;
-  top:504px;
+  top:610px;
   width:1206px;
   visibility:hidden;
   word-wrap:break-word;
