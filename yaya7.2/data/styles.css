@@ -108,3 +108,17 @@
 }
 .horizontal_line {
 }
+.text_area {
+  color:#000000;
+  text-align:left;
+}
+.checkbox {
+  text-align:left;
+}
+.html_button {
+  text-align:center;
+}
+.shape1 {
+  font-size:13px;
+  color:#000000;
+}
