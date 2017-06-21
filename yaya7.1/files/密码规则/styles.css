@@ -3862,3 +3862,31 @@
   width:160px;
   word-wrap:break-word;
 }
+#u570_div {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:144px;
+  height:32px;
+  background:inherit;
+  background-color:rgba(255, 255, 255, 0);
+  border:none;
+  border-radius:0px;
+  -moz-box-shadow:none;
+  -webkit-box-shadow:none;
+  box-shadow:none;
+}
+#u570 {
+  position:absolute;
+  left:415px;
+  top:330px;
+  width:144px;
+  height:32px;
+}
+#u571 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:144px;
+  word-wrap:break-word;
+}
