@@ -1,0 +1,308 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+  
+  天翼云盘  cloud.189.cn - 项目记录
+  
+  </title>
+  
+  
+   <link href="atom.xml" rel="alternate" title="项目记录" type="application/atom+xml">
+
+    <link rel="stylesheet" type="text/css" href="asset/mermaid.css">
+    <link rel="stylesheet" type="text/css" href="asset/style.css">
+    <link rel="stylesheet" type="text/css" href="asset/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="asset/css/foundation.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+    <script src="asset/highlightjs/highlight.pack.js"></script>
+    <link href="asset/highlightjs/styles/github.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <script type="text/javascript" src="asset/jquery_plantuml/jquery.js"></script>
+    <script type="text/javascript" src="asset/jquery_plantuml/rawdeflate.js"></script>
+    <script type="text/javascript" src="asset/jquery_plantuml/encode64.js"></script>
+     <script src="asset/echarts.common.min.js"></script>
+     <script src="asset/mermaid.min.js"></script>
+     <script type="text/javascript">
+
+     $(function(){
+       var mwebii=0;
+       var mwebChartEleId = 'mweb-chart-ele-';
+       $('pre>code').each(function(){
+         mwebii++;
+         var eleiid = mwebChartEleId+mwebii;
+         if($(this).hasClass('language-mermaid')){
+           var ele = $(this).addClass('nohighlight').parent();
+           ele.hide();
+           $('<div id="'+eleiid+'"></div>').addClass('mermaid').html($(this).text()).insertAfter(ele);
+         }else if($(this).hasClass('language-plantuml')){
+           var ele = $(this).addClass('nohighlight').parent();
+           ele.hide();
+           var str = unescape(encodeURIComponent($(this).text()));
+           var imgURL = "http://www.plantuml.com/plantuml/svg/"+encode64(deflate(str,9));
+           var newEle = $('<div id="'+eleiid+'"><img src="'+imgURL+'" /></div>').insertAfter(ele);
+         }else if($(this).hasClass('language-echarts')){
+           var ele = $(this).addClass('nohighlight').parent();
+           ele.hide();
+           $('<div style="width: 100%;height:400px;" id="'+eleiid+'"></div>').insertAfter(ele);
+           var myChart = echarts.init(document.getElementById(eleiid));
+           try  {
+             eval($(this).text());
+             myChart.setOption(option);
+           }catch(exception) {}
+         }
+       });
+
+       mermaid.init({noteMargin: 10}, ".mermaid");
+     });
+     </script>
+
+  </head>
+  <body class="antialiased hide-extras">
+
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+<div id="header">
+  <ul class="header-li">
+  
+  <li id=""><a target="self" href="index.html">Home</a></li>
+  
+  <li id=""><a target="_self" href="archives.html">Archives</a></li>
+  
+  </ul>
+</div>
+
+</nav>
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; 项目记录</span>
+  </a>
+</nav>
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+      <li><a href="index.html">Home</a></li>
+      
+        <li class="divider"></li>
+        <li><label>2015/06–至今（敬信科技）</label></li>
+
+          
+            <li><a title="CSPmeeting(B2C产品)" href="15044444336684.html">CSPmeeting(B2C产品)</a></li>
+          
+            <li><a title="YaYa医师（B2C产品)" href="15043184855761.html">YaYa医师（B2C产品)</a></li>
+          
+            <li><a title="YaYa药师（B2C产品)" href="15044441283751.html">YaYa药师（B2C产品)</a></li>
+          
+            <li><a title="合理用药（B2C产品)" href="15044443727270.html">合理用药（B2C产品)</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>2014/05–2015/05（小纸条）</label></li>
+
+          
+            <li><a title="MOPO-萌贱系校园交友(C2C产品)" href="15043150698580.html">MOPO-萌贱系校园交友(C2C产品)</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>2011/08–2014/04(21cn)</label></li>
+
+          
+            <li><a title="天翼账号 e.189.cn" href="15042758555393.html">天翼账号 e.189.cn</a></li>
+          
+            <li><a title="天翼云盘  cloud.189.cn" href="15042744655491.html">天翼云盘  cloud.189.cn</a></li>
+          
+            <li><a title="天翼电话本 pim.cloud.189.cn" href="15044457172812.html">天翼电话本 pim.cloud.189.cn</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>2010/06–2011/08(绛门通讯)</label></li>
+
+          
+            <li><a title="沃新人秀 10155.com" href="15044436862949.html">沃新人秀 10155.com</a></li>
+          
+            <li><a title="中国联通沃音乐 10155.com" href="15044436576012.html">中国联通沃音乐 10155.com</a></li>
+          
+
+      
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+        <section id="main-content" role="main" class="scroll-container">
+
+          <div class="row">
+            <div class="large-3 medium-3 columns">
+              <div class="hide-for-small">
+                <div class="sidebar">
+                <nav>
+                  <ul id="side-nav" class="side-nav">
+
+                    
+                      <li class="side-title"><span>2015/06–至今（敬信科技）</span></li>
+                        
+                          <li><a title="CSPmeeting(B2C产品)" href="15044444336684.html">CSPmeeting(B2C产品)</a></li>
+                        
+                          <li><a title="YaYa医师（B2C产品)" href="15043184855761.html">YaYa医师（B2C产品)</a></li>
+                        
+                          <li><a title="YaYa药师（B2C产品)" href="15044441283751.html">YaYa药师（B2C产品)</a></li>
+                        
+                          <li><a title="合理用药（B2C产品)" href="15044443727270.html">合理用药（B2C产品)</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>2014/05–2015/05（小纸条）</span></li>
+                        
+                          <li><a title="MOPO-萌贱系校园交友(C2C产品)" href="15043150698580.html">MOPO-萌贱系校园交友(C2C产品)</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>2011/08–2014/04(21cn)</span></li>
+                        
+                          <li><a title="天翼账号 e.189.cn" href="15042758555393.html">天翼账号 e.189.cn</a></li>
+                        
+                          <li><a title="天翼云盘  cloud.189.cn" href="15042744655491.html">天翼云盘  cloud.189.cn</a></li>
+                        
+                          <li><a title="天翼电话本 pim.cloud.189.cn" href="15044457172812.html">天翼电话本 pim.cloud.189.cn</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>2010/06–2011/08(绛门通讯)</span></li>
+                        
+                          <li><a title="沃新人秀 10155.com" href="15044436862949.html">沃新人秀 10155.com</a></li>
+                        
+                          <li><a title="中国联通沃音乐 10155.com" href="15044436576012.html">中国联通沃音乐 10155.com</a></li>
+                        
+
+                    
+                  </ul>
+                </nav>
+                </div>
+              </div>
+            </div>
+            <div class="large-9 medium-9 columns">
+ <div class="markdown-body">
+<h1>天翼云盘  cloud.189.cn</h1>
+
+<p><strong>任职时长：2011/08–2013/08（ 24月 ）<br/>
+工作职位：交互工程师<br/>
+项目地址：<a href="http://cloud.189.cn">天翼云cloud.189.cn</a><br/>
+测试账号：13560014781<br/>
+测试密码：12345678</strong></p>
+
+<hr/>
+
+<p><strong>项目简介：</strong><br/>
+天翼云是个人/家庭云数据中心，提供文件同步、备份及分享等服务的网络云存储平台。该产品是中国电信C端用户的重要战略产品之一，与电信旗下家庭云、189邮箱、天翼账号等重点产品深度整合。</p>
+
+<hr/>
+
+<p><strong>项目业绩：</strong><br/>
+业绩一：统一了天翼云VI及UI设计规范<br/>
+业绩二：完成天翼云手机客户端2.0升级改版任务<br/>
+业绩三：完成天翼云手机客户端3.0升级改版任务<br/>
+业绩四：完成天翼家庭云TV客户端1.0发布任务<br/>
+业绩五：完成天翼云PC客户端改版及文件夹图标设计</p>
+
+<hr/>
+
+<p><strong>产品截图：</strong><br/>
+WEB&amp;APP端<br/>
+<img src="media/15042744655491/1%202.jpg" alt="1 2"/></p>
+
+<p>主要界面截图<br/>
+<img src="media/15042744655491/2%202.jpg" alt="2 2"/></p>
+
+<p>UIKit<br/>
+<img src="media/15042744655491/3.jpg" alt="3"/></p>
+
+<p>产品流程图<br/>
+<img src="media/15042744655491/5.jpg" alt="5"/></p>
+
+<p><img src="media/15042744655491/img-4-large.jpg" alt="img-4-large"/></p>
+
+
+</div>
+
+<br /><br />
+<hr />
+
+<div class="row clearfix">
+  <div class="large-6 columns">
+	<div class="text-left" style="padding:15px 0px;">
+		
+	        <a href="15042758555393.html"  title="Previous Post: 天翼账号 e.189.cn">&laquo; 天翼账号 e.189.cn</a>
+	    
+	</div>
+  </div>
+  <div class="large-6 columns">
+	<div class="text-right" style="padding:15px 0px;">
+		
+	        <a href="15044457172812.html" 
+	        title="Next Post: 天翼电话本 pim.cloud.189.cn">天翼电话本 pim.cloud.189.cn &raquo;</a>
+	    
+	</div>
+  </div>
+</div>
+
+<div class="row">
+<div style="padding:0px 0.93em;" class="share-comments">
+
+</div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		var currentURL = '15042744655491.html';
+		$('#side-nav a').each(function(){
+			if($(this).attr('href') == currentURL){
+				$(this).parent().addClass('active');
+			}
+		});
+	});
+</script>  
+</div></div>
+
+
+<div class="page-bottom">
+  <div class="row">
+  <hr />
+  <div class="small-9 columns">
+  <p class="copyright">Copyright &copy; 2017</p>
+  </div>
+  <div class="small-3 columns">
+  <p class="copyright text-right"><a href="#header">TOP</a></p>
+  </div>
+
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+
+
+    <script src="asset/js/foundation.min.js"></script>
+    <script src="asset/js/foundation/foundation.offcanvas.js"></script>
+    <script>
+      $(document).foundation();
+
+
+    </script>
+    
+
+
+  </body>
+</html>

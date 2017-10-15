@@ -1,0 +1,299 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+  
+  中国联通沃音乐 10155.com - 项目记录
+  
+  </title>
+  
+  
+   <link href="atom.xml" rel="alternate" title="项目记录" type="application/atom+xml">
+
+    <link rel="stylesheet" type="text/css" href="asset/mermaid.css">
+    <link rel="stylesheet" type="text/css" href="asset/style.css">
+    <link rel="stylesheet" type="text/css" href="asset/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="asset/css/foundation.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+    <script src="asset/highlightjs/highlight.pack.js"></script>
+    <link href="asset/highlightjs/styles/github.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <script type="text/javascript" src="asset/jquery_plantuml/jquery.js"></script>
+    <script type="text/javascript" src="asset/jquery_plantuml/rawdeflate.js"></script>
+    <script type="text/javascript" src="asset/jquery_plantuml/encode64.js"></script>
+     <script src="asset/echarts.common.min.js"></script>
+     <script src="asset/mermaid.min.js"></script>
+     <script type="text/javascript">
+
+     $(function(){
+       var mwebii=0;
+       var mwebChartEleId = 'mweb-chart-ele-';
+       $('pre>code').each(function(){
+         mwebii++;
+         var eleiid = mwebChartEleId+mwebii;
+         if($(this).hasClass('language-mermaid')){
+           var ele = $(this).addClass('nohighlight').parent();
+           ele.hide();
+           $('<div id="'+eleiid+'"></div>').addClass('mermaid').html($(this).text()).insertAfter(ele);
+         }else if($(this).hasClass('language-plantuml')){
+           var ele = $(this).addClass('nohighlight').parent();
+           ele.hide();
+           var str = unescape(encodeURIComponent($(this).text()));
+           var imgURL = "http://www.plantuml.com/plantuml/svg/"+encode64(deflate(str,9));
+           var newEle = $('<div id="'+eleiid+'"><img src="'+imgURL+'" /></div>').insertAfter(ele);
+         }else if($(this).hasClass('language-echarts')){
+           var ele = $(this).addClass('nohighlight').parent();
+           ele.hide();
+           $('<div style="width: 100%;height:400px;" id="'+eleiid+'"></div>').insertAfter(ele);
+           var myChart = echarts.init(document.getElementById(eleiid));
+           try  {
+             eval($(this).text());
+             myChart.setOption(option);
+           }catch(exception) {}
+         }
+       });
+
+       mermaid.init({noteMargin: 10}, ".mermaid");
+     });
+     </script>
+
+  </head>
+  <body class="antialiased hide-extras">
+
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+<div id="header">
+  <ul class="header-li">
+  
+  <li id=""><a target="self" href="index.html">Home</a></li>
+  
+  <li id=""><a target="_self" href="archives.html">Archives</a></li>
+  
+  </ul>
+</div>
+
+</nav>
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; 项目记录</span>
+  </a>
+</nav>
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+      <li><a href="index.html">Home</a></li>
+      
+        <li class="divider"></li>
+        <li><label>2015/06–至今（敬信科技）</label></li>
+
+          
+            <li><a title="CSPmeeting(B2C产品)" href="15044444336684.html">CSPmeeting(B2C产品)</a></li>
+          
+            <li><a title="YaYa医师（B2C产品)" href="15043184855761.html">YaYa医师（B2C产品)</a></li>
+          
+            <li><a title="YaYa药师（B2C产品)" href="15044441283751.html">YaYa药师（B2C产品)</a></li>
+          
+            <li><a title="合理用药（B2C产品)" href="15044443727270.html">合理用药（B2C产品)</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>2014/05–2015/05（小纸条）</label></li>
+
+          
+            <li><a title="MOPO-萌贱系校园交友(C2C产品)" href="15043150698580.html">MOPO-萌贱系校园交友(C2C产品)</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>2011/08–2014/04(21cn)</label></li>
+
+          
+            <li><a title="天翼账号 e.189.cn" href="15042758555393.html">天翼账号 e.189.cn</a></li>
+          
+            <li><a title="天翼云盘  cloud.189.cn" href="15042744655491.html">天翼云盘  cloud.189.cn</a></li>
+          
+            <li><a title="天翼电话本 pim.cloud.189.cn" href="15044457172812.html">天翼电话本 pim.cloud.189.cn</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>2010/06–2011/08(绛门通讯)</label></li>
+
+          
+            <li><a title="沃新人秀 10155.com" href="15044436862949.html">沃新人秀 10155.com</a></li>
+          
+            <li><a title="中国联通沃音乐 10155.com" href="15044436576012.html">中国联通沃音乐 10155.com</a></li>
+          
+
+      
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+        <section id="main-content" role="main" class="scroll-container">
+
+          <div class="row">
+            <div class="large-3 medium-3 columns">
+              <div class="hide-for-small">
+                <div class="sidebar">
+                <nav>
+                  <ul id="side-nav" class="side-nav">
+
+                    
+                      <li class="side-title"><span>2015/06–至今（敬信科技）</span></li>
+                        
+                          <li><a title="CSPmeeting(B2C产品)" href="15044444336684.html">CSPmeeting(B2C产品)</a></li>
+                        
+                          <li><a title="YaYa医师（B2C产品)" href="15043184855761.html">YaYa医师（B2C产品)</a></li>
+                        
+                          <li><a title="YaYa药师（B2C产品)" href="15044441283751.html">YaYa药师（B2C产品)</a></li>
+                        
+                          <li><a title="合理用药（B2C产品)" href="15044443727270.html">合理用药（B2C产品)</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>2014/05–2015/05（小纸条）</span></li>
+                        
+                          <li><a title="MOPO-萌贱系校园交友(C2C产品)" href="15043150698580.html">MOPO-萌贱系校园交友(C2C产品)</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>2011/08–2014/04(21cn)</span></li>
+                        
+                          <li><a title="天翼账号 e.189.cn" href="15042758555393.html">天翼账号 e.189.cn</a></li>
+                        
+                          <li><a title="天翼云盘  cloud.189.cn" href="15042744655491.html">天翼云盘  cloud.189.cn</a></li>
+                        
+                          <li><a title="天翼电话本 pim.cloud.189.cn" href="15044457172812.html">天翼电话本 pim.cloud.189.cn</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>2010/06–2011/08(绛门通讯)</span></li>
+                        
+                          <li><a title="沃新人秀 10155.com" href="15044436862949.html">沃新人秀 10155.com</a></li>
+                        
+                          <li><a title="中国联通沃音乐 10155.com" href="15044436576012.html">中国联通沃音乐 10155.com</a></li>
+                        
+
+                    
+                  </ul>
+                </nav>
+                </div>
+              </div>
+            </div>
+            <div class="large-9 medium-9 columns">
+ <div class="markdown-body">
+<h1>中国联通沃音乐 10155.com</h1>
+
+<p><strong>任职时长：2010/06–2011/08（ 24月 ）<br/>
+工作职位：设计工程师<br/>
+项目地址：<a href="http://www.10155.com">中国联通沃音乐10155.com</a><br/>
+测试账号：13560014781<br/>
+测试密码：12345678</strong></p>
+
+<hr/>
+
+<p><strong>项目简介：</strong><br/>
+中国联通音乐运营中心（简称沃音乐）成立于2009年，负责中国联通音乐内容、版权、产品、音乐电商和音乐硬件等音乐相关业务的服务，为用户提供高品质音乐内容、全方位音乐服务、丰富的产品阵容，让每一个用户感受到音乐的快乐。<br/>
+沃音乐会员是中国联通音乐运营中心为联通手机用户特别打造的一款VIP专属音乐产品，包含炫铃、音乐下载、免流量和明星见面等丰富的音乐内容和权益。</p>
+
+<hr/>
+
+<p><strong>项目职责：</strong><br/>
+在该公司主要为负责“沃音乐”产品相关的整体设计规范、宣传活动与同行业竞争产品分析报告、设计升级方案等业务工作，并与多部门协调研发产品。<br/>
+主要工作内容有：1.联通“沃音乐”用户网页端主页设计方案；2.重构音乐播放流程界面；3.为移动端用户提供H5门户入口，提供完整的移动端产品体验。</p>
+
+<hr/>
+
+<p><strong>项目截图：</strong></p>
+
+<p>音乐播放页面<br/>
+<img src="media/15044436576012/%E3%80%8C%E6%92%AD%E6%94%BE%E5%99%A8%E9%A1%B5%E9%9D%A2%E3%80%8D%20.jpg" alt="「播放器页面」 "/></p>
+
+<p>专辑播放页<br/>
+<img src="media/15044436576012/%E3%80%8C%E8%99%BE%E7%B1%B3%E9%9F%B3%E4%B9%90%E5%B9%B3%E5%8F%B0%E4%BD%93%E9%AA%8C%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A%E3%80%8D.jpg" alt="「虾米音乐平台体验测试报告」"/></p>
+
+<p>WAP页面<br/>
+<img src="media/15044436576012/%E3%80%8C%E6%89%8B%E6%9C%BA%E9%97%A8%E6%88%B7%E3%80%8D.jpg" alt="「手机门户」"/></p>
+
+
+</div>
+
+<br /><br />
+<hr />
+
+<div class="row clearfix">
+  <div class="large-6 columns">
+	<div class="text-left" style="padding:15px 0px;">
+		
+	        <a href="15044436862949.html"  title="Previous Post: 沃新人秀 10155.com">&laquo; 沃新人秀 10155.com</a>
+	    
+	</div>
+  </div>
+  <div class="large-6 columns">
+	<div class="text-right" style="padding:15px 0px;">
+		
+	</div>
+  </div>
+</div>
+
+<div class="row">
+<div style="padding:0px 0.93em;" class="share-comments">
+
+</div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		var currentURL = '15044436576012.html';
+		$('#side-nav a').each(function(){
+			if($(this).attr('href') == currentURL){
+				$(this).parent().addClass('active');
+			}
+		});
+	});
+</script>  
+</div></div>
+
+
+<div class="page-bottom">
+  <div class="row">
+  <hr />
+  <div class="small-9 columns">
+  <p class="copyright">Copyright &copy; 2017</p>
+  </div>
+  <div class="small-3 columns">
+  <p class="copyright text-right"><a href="#header">TOP</a></p>
+  </div>
+
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+
+
+    <script src="asset/js/foundation.min.js"></script>
+    <script src="asset/js/foundation/foundation.offcanvas.js"></script>
+    <script>
+      $(document).foundation();
+
+
+    </script>
+    
+
+
+  </body>
+</html>
