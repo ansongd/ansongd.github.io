@@ -43,6 +43,7 @@ hr {
   margin: 15px 0;
   overflow: hidden;
   background: transparent;
+  border: 0;
   border-bottom: 1px solid #ddd;
 }
 
